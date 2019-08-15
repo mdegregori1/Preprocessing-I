@@ -109,7 +109,7 @@ body {
 }
 ol,
 ul {
-  list-style: none;
+  list-style: square;
 }
 blockquote,
 q {
@@ -141,7 +141,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  border: 2px solid black;
   height: 10vh;
 }
 nav a {
@@ -152,12 +151,26 @@ nav a {
 }
 /* About me section */
 .aboutme {
-  border: 1px solid black !important;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   margin: 2rem;
   background-color: #D3D3D3;
+}
+.aboutme img {
+  margin: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .aboutme img {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .aboutme .topbody {
   width: 90%;
@@ -171,16 +184,132 @@ nav a {
 .aboutme .topbody h3 {
   font-size: 1.5rem;
   margin: 1.5rem;
+  text-align: center;
 }
 .aboutme .topbody button {
   font-size: 1.5rem;
   margin: 4rem;
 }
-img {
+@media screen and (max-width: 500px) {
+  .aboutme .topbody button {
+    display: none;
+  }
+}
+/*Paragraph and Stuff */
+.skills {
+  margin: 2rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+@media screen and (max-width: 500px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12rem;
+  }
+}
+.skills .skillsleft {
+  margin: 2rem;
+  width: 50%;
+}
+.skills .skillsleft h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsleft {
+    width: 100%;
+  }
+}
+.skills .skillsleft h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.skills .skillsleft p {
+  text-align: left;
+  padding: 1.25rem;
+}
+.skills .skillsright {
+  width: 30%;
   margin: 2rem;
 }
-/*Paragraph and Stuff I'm good at */
-.skills {
-  border: 1px solid red !important;
+.skills .skillsright h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsright {
+    width: 100%;
+  }
+}
+.skills .skillsright h3 {
+  padding: 1.25rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsright h3 {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsright ul li {
+    text-align: center;
+    list-style-position: inside;
+  }
+}
+/*Work Experience */
+.workhistory {
   margin: 2rem;
+  margin-top: 5rem;
+  height: 50vh;
+}
+.workhistory h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .workhistory {
+    margin-top: 15rem;
+  }
+}
+.workhistory div {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.workhistory table {
+  width: 100%;
+  border-spacing: 40px;
+}
+.workhistory table th {
+  text-align: left;
+  font-weight: bold;
+  background-color: #D3D3D3;
+}
+.workhistory table td {
+  text-align: left;
+}
+table,
+th,
+td {
+  padding: 1.25rem;
+}
+.quake td {
+  background-color: #D3D3D3;
+}
+/*footer*/
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+  background-color: #708090;
 }
