@@ -89,6 +89,11 @@ html, body {
 /*Navigation Bar */
  nav {
 	.navbar1();
+	@media screen and (max-width: 500px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 	a {
 		text-decoration: none;
 		letter-spacing: 3px;
@@ -114,6 +119,8 @@ html, body {
 		@media screen and (max-width: 500px) {
 			display: flex;
 			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 	
 		}
 		.topbody {
