@@ -1,1 +1,322 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: square;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* mix-ins */
+/*Variables*/
+/*Navigation Bar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 10vh;
+}
+@media screen and (max-width: 500px) {
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+nav a {
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #000000;
+  padding: 2rem;
+}
+/* About me section */
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 2rem;
+  background-color: #D3D3D3;
+}
+.aboutme img {
+  margin: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .aboutme img {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aboutme {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.aboutme .topbody {
+  width: 90%;
+  height: 50vh;
+  text-align: center;
+}
+.aboutme .topbody h1 {
+  font-size: 2.5rem;
+  margin: 1.5rem;
+}
+.aboutme .topbody h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+.aboutme .topbody button {
+  font-size: 1.5rem;
+  margin: 4rem;
+}
+@media screen and (max-width: 500px) {
+  .aboutme .topbody button {
+    display: none;
+  }
+}
+/*Paragraph and Stuff */
+.skills {
+  margin: 2rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+@media screen and (max-width: 500px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 12rem;
+  }
+}
+.skills .skillsleft {
+  margin: 2rem;
+  width: 50%;
+}
+.skills .skillsleft h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsleft {
+    width: 100%;
+  }
+}
+.skills .skillsleft h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.skills .skillsleft p {
+  text-align: left;
+  padding: 1.25rem;
+}
+.skills .skillsright {
+  width: 30%;
+  margin: 2rem;
+}
+.skills .skillsright h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsright {
+    width: 100%;
+  }
+}
+.skills .skillsright h3 {
+  padding: 1.25rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsright h3 {
+    padding: 0px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .skills .skillsright ul li {
+    text-align: center;
+    list-style-position: inside;
+  }
+}
+/*Work Experience */
+.workhistory {
+  margin: 2rem;
+  margin-top: 5rem;
+  height: 50vh;
+}
+.workhistory h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 500px) {
+  .workhistory {
+    margin-top: 15rem;
+  }
+}
+.workhistory div {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.workhistory table {
+  width: 100%;
+  border-spacing: 40px;
+}
+.workhistory table th {
+  text-align: left;
+  font-weight: bold;
+  background-color: #D3D3D3;
+}
+.workhistory table td {
+  text-align: left;
+}
+table,
+th,
+td {
+  padding: 1.25rem;
+}
+.quake td {
+  background-color: #D3D3D3;
+}
+/*footer*/
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vh;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 0;
+  background-color: #708090;
+}

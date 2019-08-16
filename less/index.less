@@ -33,7 +33,8 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	list-style: square;
+	
 }
 blockquote, q {
 	quotes: none;
@@ -54,6 +55,210 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+/* mix-ins */
+.navbar1(){
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	height: 10vh;
+}
+.body(){
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30vh;
+}
+.bodyfoot(){
+	margin-top: 2rem;
+	margin-right: 2rem;
+	margin-left: 2rem;
+	margin-bottom: 0;
+	background-color: @color-three;
+}
+/*Variables*/
+@color-one: #D3D3D3;
+@color-two: #000000;
+@color-three: #708090;
+@main-margin: 2rem;
+@main-padding: 1.25rem;
+@funfont: "Comic Sans MS", cursive, sans-serif;
+
+/*Navigation Bar */
+ nav {
+	.navbar1();
+	@media screen and (max-width: 500px) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	a {
+		text-decoration: none;
+		letter-spacing: 3px;
+		color: @color-two;
+		padding: 2rem;
+	}
+}
+
+/* About me section */
+.aboutme {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-family: @funfont;
+	margin: @main-margin;
+	background-color: @color-one;
+	img {
+		margin: @main-margin;
+		@media screen and (max-width: 500px) {
+			display: none;
+		}
+	}
+		@media screen and (max-width: 500px) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+	
+		}
+		.topbody {
+			width: 90%;
+			height: 50vh;
+			text-align: center;
+			h1 {
+				font-size: 2.5rem;
+				margin: 1.5rem;
+			}
+			h3 {
+				font-size: 1.5rem;
+				margin: 1.5rem;
+				text-align: center;
+			}			
+			button {
+				font-size: 1.5rem;
+				margin: 4rem;
+				@media screen and (max-width: 500px) {
+					display: none;
+				}
+			}
+			
+	
+	}
+}
+
+/*Paragraph and Stuff */
+.skills {
+	margin: @main-margin;
+	text-decoration: none;
+	@media screen and (max-width: 500px) {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: 12rem;
+	}
+	.body();
+		.skillsleft {
+			margin: @main-margin;
+			width: 50%;
+			h3 {
+				font-size: 1.5rem;
+				margin: 1.5rem;
+				text-align: center;
+			}			
+			@media screen and (max-width: 500px) {
+				width: 100%;
+  
+			}
+				h3 {
+					font-family: @funfont;
+				}
+				p {
+					text-align: left;
+					padding: @main-padding;
+				
+				}
+		}
+		.skillsright {
+			width: 30%;
+			margin: @main-margin;
+			h3 {
+				font-size: 1.5rem;
+				margin: 1.5rem;
+				text-align: center;
+			}			
+			@media screen and (max-width: 500px) {
+				width: 100%;
+  
+			}
+
+			h3 {
+				padding: @main-padding;
+				font-family: @funfont;
+				@media screen and (max-width: 500px) {
+					padding: 0px;
+				}
+			}
+
+			ul li {
+				@media screen and (max-width: 500px) {
+					text-align: center;
+					list-style-position: inside;
+  
+				}
+			}
+
+		
+		}
+}
+
+/*Work Experience */
+
+.workhistory {
+	margin: @main-margin;
+	margin-top: 5rem;
+	height: 50vh;
+	h3 {
+		font-size: 1.5rem;
+		margin: 1.5rem;
+		text-align: center;
+	}	
+		@media screen and (max-width: 500px) {
+			margin-top: 15rem;
+		}
+	div {
+		font-family: @funfont;
+	}
+	table {
+		width: 100%;
+		border-spacing: 40px;
+
+		th {
+			text-align: left;
+			font-weight: bold;
+			background-color: @color-one;
+		}
+		td {
+			text-align: left;
+
+		}
+	}
+}
+
+table, th, td {
+	padding: @main-padding;
+}
+ .quake td {
+	background-color: @color-one;
+}
+
+/*footer*/
+
+.foot {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 15vh;
+	.bodyfoot();
+}
